@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- FACEBOOK PIXELS INTEGRADOS -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}}
+    window.fbq = window.fbq || function() { (window.fbq = window.fbq || []).push };
+    fbq('init', '343500792907295'); // Pixel 1
+    fbq('init', '1738721740520855'); // Pixel 2
+    fbq('track', 'PageView');
+    </script>
+    <noscript>
+    <img height="1" width="1" style="display:none" 
+         src="https://www.facebook.com/tr?id=343500792907295&ev=PageView&noscript=1"/>
+    <img height="1" width="1" style="display:none" 
+         src="https://www.facebook.com/tr?id=1738721740520855&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- FIM DOS FACEBOOK PIXELS -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raio-X dos Chakras | Descubra onde sua vida pede atenção</title>
+    <style>
+        :root {
+            --app-dark: #0D0D1A;
+            --app-card: #1A1A2E;
+            --light-bg: #FBFBFB;
+            --accent-bg: #F2F2F7;
+            --gold-cta: #C5A059;
+            --text-dark: #1A1A1A;
+            --text-light: #FFFFFF;
+            --text-muted: #A0A0A0;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; }
+
+        body {
+            font-family: 'Aptos', 'Aptos Light', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--light-bg);
+        }
+
+        h1, h2, h3 { font-weight: 700; line-height: 1.2; text-transform: uppercase; letter-spacing: -0.02em; }
+        p { font-weight: 300; }
+        .text-center { text-align: center; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--gold-cta);
+            color: var(--text-light);
+            padding: 22px 45px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 10px 20px rgba(197, 160, 89, 0.3);
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 30px rgba(197, 160, 89, 0.5);
+            filter: brightness(1.1);
+        }
+
+        section { padding: 100px 0; }
+        .section-dark { background-color: var(--app-dark); color: var(--text-light); }
+        .section-light { background-color: var(--light-bg); color: var(--text-dark); }
+        .section-accent { background-color: var(--accent-bg); color: var(--text-dark); }
+
+        .hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            min-height: 95vh;
+            background: radial-gradient(circle at center, #1a1a3a 0%, #0d0d1a 100%);
+        }
+
+        .hero h1 { font-size: 3.2rem; margin-bottom: 25px; max-width: 900px; }
+        .hero p { font-size: 1.3rem; margin-bottom: 40px; max-width: 750px; opacity: 0.9; }
+        .hero-steps { margin-bottom: 40px; font-size: 1.1rem; list-style: none; opacity: 0.8; }
+        .hero-steps li { margin-bottom: 12px; }
+        .price-info { margin-top: 25px; font-size: 1rem; opacity: 0.7; font-weight: 300; }
+
+        .pain-block { max-width: 800px; margin: 0 auto; }
+        .pain-block h2 { font-size: 2.2rem; margin-bottom: 30px; text-align: center; }
+        .pain-list {
+            list-style: none;
+            margin: 40px 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+        }
+        .pain-list li {
+            font-size: 1.1rem;
+            padding: 15px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .pain-list li::before { content: "•"; color: var(--gold-cta); font-weight: bold; font-size: 1.5rem; }
+
+        .chakras-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            margin-top: 50px;
+        }
+        .chakra-card {
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            transition: var(--transition);
+            border: 1px solid #eee;
+        }
+        .chakra-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .chakra-card h3 { font-size: 1.1rem; margin-bottom: 10px; }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+            text-align: center;
+        }
+        .process-item h4 { font-size: 3rem; color: var(--gold-cta); margin-bottom: 10px; }
+
+        .map-display {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 60px;
+        }
+        .app-mockup {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 40px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.8);
+            border: 12px solid #1a1a1a;
+        }
+
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 50px;
+        }
+        .resource-card {
+            padding: 30px;
+            background: white;
+            border-radius: 20px;
+            border-left: 6px solid var(--gold-cta);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+        }
+
+        .vitality-box {
+            background: var(--app-card);
+            color: white;
+            padding: 50px;
+            border-radius: 30px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .bonus-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+        .bonus-card {
+            display: flex;
+            flex-direction: column; /* Alterado para Vertical para melhor leitura */
+            align-items: center;
+            gap: 20px;
+            background: var(--app-card);
+            padding: 30px;
+            border-radius: 25px;
+            border: 1px solid rgba(255,255,255,0.05);
+            text-align: center;
+        }
+        .bonus-img { width: 100%; max-width: 400px; height: auto; filter: drop-shadow(0 20px 30px rgba(0,0,0,0.5)); }
+        .bonus-infografico { max-width: 100%; width: 100%; height: auto; border-radius: 10px; }
+
+        .faq-container { max-width: 800px; margin: 50px auto 0; }
+        .faq-item {
+            margin-bottom: 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            border: 1px solid #eee;
+        }
+        .faq-item h4 { margin-bottom: 10px; font-size: 1.1rem; }
+
+        .final-box {
+            background: linear-gradient(135deg, #0D0D1A 0%, #1A1A3A 100%);
+            color: white;
+            border-radius: 40px;
+            padding: 80px 40px;
+            text-align: center;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+        }
+        .checklist {
+            list-style: none;
+            max-width: 500px;
+            margin: 40px auto;
+            text-align: left;
+            font-size: 1.1rem;
+        }
+        .checklist li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .checklist li::before { content: "✓"; color: var(--gold-cta); font-weight: bold; }
+
+        footer { padding: 60px 0; text-align: center; opacity: 0.6; font-size: 0.9rem; }
+        .logos-footer {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 30px;
+            align-items: center;
+        }
+        .logos-footer img { height: 50px; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .map-display { grid-template-columns: 1fr; text-align: center; }
+            section { padding: 60px 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container" style="padding-top: 30px; text-align: center;">
+        <a href="http://www.pranion.com.br"><img src="https://i.postimg.cc/vmcqPtxh/Logo.png" alt="Pranion Logo" style="height: 70px;"></a>
+    </div>
+
+    <section class="section-dark hero">
+        <div class="container">
+            <h1>Descubra onde sua vida está pedindo atenção</h1>
+            <p>Faça seu mapeamento dos 7 chakras e descubra quais áreas aparecem alinhadas e quais merecem mais atenção neste momento — com uma orientação personalizada.</p>
+            <ul class="hero-steps">
+                <li>• Você responde algumas perguntas sobre o seu momento atual.</li>
+                <li>• Seu mapa é gerado instantaneamente.</li>
+                <li>• Você explora cada chakra e os recursos relacionados.</li>
+            </ul>
+            <a href="https://pay.kiwify.com.br/LdIpnbE" class="cta-button">Ver meu Raio-X</a>
+            <div class="price-info">
+                Acesso vitalício • Pagamento único de R$ 35,00 <br>
+                ou 8x de R$ 5,09
+            </div>
+        </div>
+    </section>
+
+    <section class="section-light">
+        <div class="container">
+            <div class="pain-block">
+                <h2>Tem alguma área da sua vida que parece não estar fluindo?</h2>
+                <p class="text-center">Talvez você sinta que alguma coisa está diferente, mas não consiga identificar exatamente o quê.</p>
+                <ul class="pain-list">
+                    <li>Na sua relação com dinheiro.</li>
+                    <li>Na sua autoestima.</li>
+                    <li>Nos seus relacionamentos.</li>
+                    <li>Na sua criatividade.</li>
+                    <li>Na forma como você se comunica.</li>
+                    <li>Na sua capacidade de tomar decisões.</li>
+                    <li>Sensação de estar vivendo no automático.</li>
+                </ul>
+                <p class="text-center" style="margin-top: 30px;">O problema é que, quando essa sensação fica apenas no campo da intuição, pode ser difícil saber por onde começar. <strong>O Raio-X dos Chakras transforma essa sensação em um mapa explorável.</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-accent">
+        <div class="container">
+            <h2 class="text-center">Seu momento atual pode ser olhado por 7 perspectivas</h2>
+            <p class="text-center" style="margin-bottom: 40px;">Cada centro está relacionado simbolicamente a diferentes dimensões da experiência humana.</p>
+            <div class="chakras-grid">
+                <div class="chakra-card" style="border-top: 5px solid #ef4444;"><h3>💰 Básico</h3><p>Prosperidade, segurança & vitalidade</p></div>
+                <div class="chakra-card" style="border-top: 5px solid #f97316;"><h3>❤️ Sacro</h3><p>Criatividade, relacionamentos & prazer</p></div>
+                <div class="chakra-card" style="border-top: 5px solid #eab308;"><h3>⚡ Plexo Solar</h3><p>Poder pessoal, autoestima & realização</p></div>
+                <div class="chakra-card" style="border-top: 5px solid #22c55e;"><h3>💖 Cardíaco</h3><p>Amor, perdão & harmonia afetiva</p></div>
+                <div class="chakra-card" style="border-top: 5px solid #3b82f6;"><h3>🗣️ Laríngeo</h3><p>Expressão, comunicação & vendas</p></div>
+                <div class="chakra-card" style="border-top: 5px solid #6366f1;"><h3>👁️ Frontal</h3><p>Intuição, foco & visão de futuro</p></div>
+                <div class="chakra-card" style="border-top: 5px solid #a855f7;"><h3>✨ Coronário</h3><p>Espiritualidade & conexão</p></div>
+            </div>
+            <p class="text-center" style="margin-top: 40px; opacity: 0.7;">Você não precisa conhecer chakras para começar. O questionário conduz a experiência.</p>
+        </div>
+    </section>
+
+    <section class="section-light">
+        <div class="container">
+            <h2 class="text-center">Seu mapa começa com você</h2>
+            <p class="text-center">O mapeamento parte das suas próprias respostas sobre o seu momento.</p>
+            <div class="process-grid">
+                <div class="process-item"><h4>01</h4><p><strong>RESPONDA</strong><br>Questionário sobre sentimentos e comportamentos.</p></div>
+                <div class="process-item"><h4>02</h4><p><strong>DESCUBRA</strong><br>Receba seu mapeamento individual dos 7 chakras.</p></div>
+                <div class="process-item"><h4>03</h4><p><strong>EXPLORE</strong><br>Identifique pontos de atenção e áreas alinhadas.</p></div>
+                <div class="process-item"><h4>04</h4><p><strong>COMECE</strong><br>Acesse recursos práticos para sua rotina.</p></div>
+            </div>
+            <div class="text-center" style="margin-top: 60px;">
+                <a href="https://pay.kiwify.com.br/LdIpnbE" class="cta-button">Ver meu Raio-X</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-dark">
+        <div class="container">
+            <div class="map-display">
+                <div>
+                    <h2>Veja o seu momento como um mapa</h2>
+                    <p style="margin: 20px 0; opacity: 0.8; font-size: 1.2rem;">O resultado não é uma frase genérica. Você visualiza seus 7 chakras individualmente e identifica exatamente onde estão os pontos de atenção.</p>
+                    <div style="margin-top: 30px; background: var(--app-card); padding: 20px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.1);">
+                        <p>🟢 Chakra Básico: Alinhado</p>
+                        <p>🟢 Chakra Sacro: Alinhado</p>
+                        <p style="color: var(--gold-cta);">🔵 Chakra Plexo Solar: Ponto de Atenção</p>
+                        <p style="color: var(--gold-cta);">🔵 Chakra Cardíaco: Ponto de Atenção</p>
+                        <p>🟢 Chakra Laríngeo: Alinhado</p>
+                    </div>
+                </div>
+                <img src="https://i.postimg.cc/2ygrJn2x/5-(2).png" alt="Resultado Raio-X" class="app-mockup">
+            </div>
+        </div>
+    </section>
+
+    <section class="section-light">
+        <div class="container">
+            <h2 class="text-center">Seu resultado não termina no mapa</h2>
+            <p class="text-center">Ao encontrar um ponto de atenção, você abre um universo de recursos:</p>
+            <div class="resource-grid">
+                <div class="resource-card"><h3>🎵 Frequência Solfeggio</h3><p>Player integrado com opções de 15, 30 ou 60 min, modo binaural e sons ambiente.</p></div>
+                <div class="resource-card"><h3>💎 Cristal</h3><p>Indicação do cristal específico associado ao centro que você está explorando.</p></div>
+                <div class="resource-card"><h3>🌸 Floral</h3><p>Floral de Bach indicado para a finalidade energética daquele resultado.</p></div>
+                <div class="resource-card"><h3>🌿 Natureza</h3><p>Sugestão simples e prática para incorporar ao seu dia a dia.</p></div>
+                <div class="resource-card"><h3>✨ Decreto</h3><p>Uma afirmação poderosa para reprogramação. Ex: "Minha voz expressa minha verdade."</p></div>
+            </div>
+            <div class="text-center" style="margin-top: 50px;">
+                <img src="https://i.postimg.cc/Y2L9NSX4/4.png" alt="Recursos Detalhados" class="app-mockup" style="max-width: 350px;">
+            </div>
+        </div>
+    </section>
+
+    <section class="section-accent">
+        <div class="container">
+            <div class="vitality-box">
+                <h2>Seu acesso é vitalício</h2>
+                <p style="margin: 20px 0; font-size: 1.2rem;">Seu momento muda. Suas experiências mudam. Por isso, você pode refazer seu mapeamento sempre que quiser.</p>
+                <div class="process-grid" style="text-align: left; margin-bottom: 30px;">
+                    <div class="process-item" style="text-align: left;"><p>✓ Refazer mapeamentos</p><p>✓ Acompanhar histórico</p><p>✓ Voltar às frequências</p></div>
+                    <div class="process-item" style="text-align: left;"><p>✓ Observar mudanças</p><p>✓ Revisitar resultados</p><p>✓ Explorar novos recursos</p></div>
+                </div>
+                <p><strong>Sem mensalidade. Sem renovação anual. Sem prazo.</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-dark">
+        <div class="container">
+            <h2 class="text-center">Para ir além do seu mapa...</h2>
+            <div class="bonus-grid">
+                <div class="bonus-card">
+                    <img src="https://i.postimg.cc/g2FGHqwb/Capa-E-Book.png" alt="Ebook Solfeggios" class="bonus-img">
+                    <div>
+                        <h3>📖 E-BOOK — Chakras e Solfeggios</h3>
+                        <p>Um guia completo para entender as frequências e os centros energéticos com contexto e profundidade.</p>
+                    </div>
+                </div>
+                <div class="bonus-card">
+                    <img src="https://i.postimg.cc/44YK8P3B/Infografico.png" alt="Infográfico" class="bonus-infografico">
+                    <div>
+                        <h3>🎁 BÔNUS — Infográfico Visual</h3>
+                        <p>Consulta rápida da relação entre Chakras e Solfeggios, diferenciando Tradição, Hipótese e Evidência.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-light">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
+                <div style="background: var(--accent-bg); padding: 40px; border-radius: 20px;">
+                    <h3>É para você se...</h3>
+                    <ul class="pain-list" style="margin: 20px 0; grid-template-columns: 1fr;">
+                        <li>Sente que algo não está fluindo.</li>
+                        <li>Quer entender melhor seu momento atual.</li>
+                        <li>Gosta de ferramentas de autoconhecimento.</li>
+                        <li>Interessa-se por Reiki, Meditação ou Terapias Holísticas.</li>
+                    </ul>
+                </div>
+                <div style="padding: 40px; border: 1px solid #eee; border-radius: 20px;">
+                    <h3>Para quem NÃO é?</h3>
+                    <p style="margin-top: 20px;">O Raio-X não é um diagnóstico médico ou psicológico. Não substitui acompanhamento profissional de saúde. É uma experiência de bem-estar e autoconhecimento.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-accent">
+        <div class="container">
+            <h2 class="text-center">Perguntas Frequentes</h2>
+            <div class="faq-container">
+                <div class="faq-item"><h4>Preciso baixar algum aplicativo?</h4><p>Não. O Raio-X funciona diretamente no navegador do seu celular ou computador.</p></div>
+                <div class="faq-item"><h4>Por quanto tempo terei acesso?</h4><p>O acesso é vitalício. Você paga uma única vez e o produto é seu para sempre.</p></div>
+                <div class="faq-item"><h4>O resultado pode mudar?</h4><p>Sim. Como sua vida muda, refazer o mapeamento permite acompanhar sua evolução vibracional no histórico.</p></div>
+                <div class="faq-item"><h4>Preciso conhecer chakras para usar?</h4><p>Não. O questionário é intuitivo e os resultados explicam cada centro individualmente.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-dark" style="padding-bottom: 0;">
+        <div class="container">
+            <div class="final-box">
+                <h2>Comece pelo seu próprio mapa</h2>
+                <ul class="checklist">
+                    <li>🔮 Raio-X dos Chakras (Mapeamento Individual)</li>
+                    <li>🎵 Frequências Solfeggio com Player</li>
+                    <li>📊 Histórico de Evolução Vibracional</li>
+                    <li>📖 E-book Chakras e Solfeggios</li>
+                    <li>🎁 Infográfico Bônus</li>
+                    <li>∞ <strong>ACESSO VITALÍCIO</strong></li>
+                </ul>
+                <h3 style="font-size: 3rem; color: var(--gold-cta); margin: 20px 0;">R$ 35,00 <br> <span style="font-size: 1.2rem; color: white;">ou 8x de R$ 5,09</span></h3>
+                <a href="https://pay.kiwify.com.br/LdIpnbE" class="cta-button">Ver meu Raio-X Agora</a>
+                <p style="margin-top: 30px; opacity: 0.6; font-size: 0.9rem;">
+                    Condição promocional de lançamento. O valor de R$ 35,00 não será permanente.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="logos-footer">
+                <a href="http://www.pranion.com.br"><img src="https://i.postimg.cc/vmcqPtxh/Logo.png" alt="Pranion"></a>
+                <a href="http://www.pocketappstudio.com.br"><img src="https://i.postimg.cc/T1jwRc7Y/3.png" alt="Pocket App Studio"></a>
+            </div>
+            <p>&copy; 2026 Pranion Terapias. Todos os direitos reservados.</p>
+            <p style="font-size: 0.7rem; margin-top: 10px;">Não constitui diagnóstico médico ou psicológico.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
